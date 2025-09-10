@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../src/main.js"],"sourcesContent":["if (\"serviceWorker\" in navigator) {\n  navigator.serviceWorker.register(\"/sw.js\")\n    .then(() => console.log(\"✅ Service Worker зареєстрований\"))\n    .catch(err => console.error(\"❌ Помилка SW:\", err));\n}\n"],"names":["err"],"mappings":"0uBAAI,kBAAmB,WACrB,UAAU,cAAc,SAAS,QAAQ,EACtC,KAAK,IAAM,QAAQ,IAAI,iCAAiC,CAAC,EACzD,MAAMA,GAAO,QAAQ,MAAM,gBAAiBA,CAAG,CAAC"}
+{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
