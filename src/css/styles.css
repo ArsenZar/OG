@@ -27,6 +27,8 @@
 body{
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
+    overflow: hidden;
+    background-color: white;
 }
 section{
   width: 100%;
