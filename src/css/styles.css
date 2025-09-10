@@ -12,7 +12,37 @@
 
 /* Sections style */
 @import url('./header.css');
+@import url('./card.css');
+@import url('./navigation.css');
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+}
+section{
+  width: 100%;
+  max-width: 425px;
+  display: flex;
+  border: 1px solid red;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.modul{
+  height: calc(35vh - 36px);
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-bottom: 16px;
+}
