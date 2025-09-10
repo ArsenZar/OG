@@ -13,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "./src/img/logoApp.png",
+      "src": "./img/logoApp.png",
       "sizes": "512x512",
       "type": "image/png"
     }
