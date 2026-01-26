@@ -49,3 +49,37 @@ if (isInStandaloneMode()) {
   console.log("🌐 Додаток запущений у браузері");
 }
 
+const backButton = document.querySelector(".backButton");
+const icons = document.querySelectorAll(".ico");
+
+icons.forEach(icon => {
+  icon.addEventListener("click", () => {
+
+    // reset
+    icons.forEach(i => {
+      i.src = i.dataset.default;
+    });
+
+    // active
+    icon.src = icon.dataset.active;
+
+    // indicator
+    backButton.style.left = icon.dataset.offset + "px";
+  });
+});
+
+// icoHome.addEventListener("click", () => {
+//   backButton.style.left = "0px";
+// });
+
+// icoRaiting.addEventListener("click", () => {
+//   backButton.style.left = "85px";
+// });
+
+// icoCalendar.addEventListener("click", () => {
+//   backButton.style.left = "175px";
+// });
+
+// icoFolder.addEventListener("click", () => {
+//   backButton.style.left = "263px";
+// });
