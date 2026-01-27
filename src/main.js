@@ -51,6 +51,7 @@ if (isInStandaloneMode()) {
 
 const backButton = document.querySelector(".backButton");
 const icons = document.querySelectorAll(".ico");
+const navImg = document.querySelector(".navImg");
 
 icons.forEach(icon => {
   icon.addEventListener("click", () => {
@@ -63,8 +64,11 @@ icons.forEach(icon => {
     // active
     icon.src = icon.dataset.active;
 
+    console.log(navImg.offsetWidth);
+
+
     // indicator
-    backButton.style.left = icon.dataset.offset + "px";
+    backButton.style.left = icon.dataset.offset + "%";
   });
 });
 
