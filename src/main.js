@@ -49,41 +49,87 @@ if (isInStandaloneMode()) {
   console.log("🌐 Додаток запущений у браузері");
 }
 
+import home from "./img/Home.svg";
+import homeBlack from "./img/HomeBlack.svg";
+import raiting from "./img/Raiting.svg";
+import raitingBlack from "./img/RaitingBlack.svg";
+import calendar from "./img/Calendar.svg";
+import calendarBlack from "./img/CalendarBlack.svg";
+import folder from "./img/Folder.svg";
+import folderBlack from "./img/FolderBlack.svg";
+
 const backButton = document.querySelector(".backButton");
+const defaultActive = "home";
+
+
+const iconsMap = {
+  home: {
+    default: homeBlack,
+    active: home,
+    offset: "0%"
+  },
+  raiting: {
+    default: raitingBlack,
+    active: raiting,
+    offset: "25%"
+  },
+  calendar: {
+    default: calendarBlack,
+    active: calendar,
+    offset: "50%"
+  },
+  folder: {
+    default: folderBlack,
+    active: folder,
+    offset: "75%"
+  }
+};
+
 const icons = document.querySelectorAll(".ico");
-const navImg = document.querySelector(".navImg");
 
 icons.forEach(icon => {
-  icon.addEventListener("click", () => {
+  const name = icon.dataset.name;
 
-    // reset
+  // 👉 якщо це home — активна
+  if (name === defaultActive) {
+    icon.src = iconsMap[name].active;
+    backButton.style.left = iconsMap[name].offset;
+  } else {
+    icon.src = iconsMap[name].default;
+  }
+
+  icon.addEventListener("click", () => {
     icons.forEach(i => {
-      i.src = i.dataset.default;
+      const n = i.dataset.name;
+      i.src = iconsMap[n].default;
     });
 
-    // active
-    icon.src = icon.dataset.active;
-
-    console.log(navImg.offsetWidth);
-
-
-    // indicator
-    backButton.style.left = icon.dataset.offset + "%";
+    icon.src = iconsMap[name].active;
+    backButton.style.left = iconsMap[name].offset;
   });
 });
 
-// icoHome.addEventListener("click", () => {
-//   backButton.style.left = "0px";
-// });
 
-// icoRaiting.addEventListener("click", () => {
-//   backButton.style.left = "85px";
-// });
 
-// icoCalendar.addEventListener("click", () => {
-//   backButton.style.left = "175px";
-// });
+// const backButton = document.querySelector(".backButton");
+// const icons = document.querySelectorAll(".ico");
+// const navImg = document.querySelector(".navImg");
 
-// icoFolder.addEventListener("click", () => {
-//   backButton.style.left = "263px";
+// icons.forEach(icon => {
+//   icon.addEventListener("click", () => {
+
+//     // reset
+//     icons.forEach(i => {
+//       i.src = i.dataset.default;
+//     });
+
+//     // active
+//     icon.src = icon.dataset.active;
+
+//     console.log(navImg.offsetWidth);
+
+
+//     // indicator
+//     backButton.style.left = icon.dataset.offset + "%";
+//   });
 // });
