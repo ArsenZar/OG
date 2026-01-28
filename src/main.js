@@ -66,22 +66,22 @@ const iconsMap = {
   home: {
     default: homeBlack,
     active: home,
-    offset: "0%"
+    offset: "0"
   },
   raiting: {
     default: raitingBlack,
     active: raiting,
-    offset: "25%"
+    offset: "24"
   },
   calendar: {
     default: calendarBlack,
     active: calendar,
-    offset: "50%"
+    offset: "48"
   },
   folder: {
     default: folderBlack,
     active: folder,
-    offset: "75%"
+    offset: "72"
   }
 };
 
@@ -105,7 +105,7 @@ icons.forEach(icon => {
     });
 
     icon.src = iconsMap[name].active;
-    backButton.style.left = iconsMap[name].offset;
+    backButton.style.left = iconsMap[name].offset + "%";
   });
 });
 
