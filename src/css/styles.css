@@ -37,7 +37,7 @@ section{
   height: 100vh;
   margin: 0 auto;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .modul{
