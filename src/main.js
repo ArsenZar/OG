@@ -85,9 +85,10 @@ const iconsMap = {
   }
 };
 
+const contentImages = document.querySelectorAll(".content img");
 const icons = document.querySelectorAll(".ico");
 
-icons.forEach(icon => {
+icons.forEach((icon, index) => {
   const name = icon.dataset.name;
 
   // 👉 якщо це home — активна
@@ -106,8 +107,15 @@ icons.forEach(icon => {
 
     icon.src = iconsMap[name].active;
     backButton.style.left = iconsMap[name].offset + "%";
+
+    contentImages.forEach(img =>
+      img.classList.remove("contentActive")
+    );
+
+    contentImages[index].classList.add("contentActive");
   });
 });
+
 
 
 

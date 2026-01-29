@@ -91,3 +91,9 @@ nav{
 .icoHome{
   color: black;
 }
+.content img{
+  display: none;
+}
+img.contentActive{
+  display: flex;
+}
