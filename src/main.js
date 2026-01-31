@@ -28,6 +28,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     btn.style.cursor = "pointer";
     document.body.appendChild(btn);
 
+    
     // Якщо юзер натискає → викликаємо системне вікно встановлення
     btn.addEventListener("click", () => {
       deferredPrompt.prompt(); // показуємо системний діалог
